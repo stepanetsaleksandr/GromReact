@@ -1,16 +1,9 @@
-const rootElement = document.querySelector("#root");
-
-// const greetingElem = document.createElement("div");
-// greetingElem.classList.add("greeting");
-// greetingElem.textContent = "Hello, React!";
-// rootElement.append(greetingElem);
+const rootElem = document.querySelector("#root");
 
 const greetingElem = React.createElement(
   "div",
-  {
-    className: "greeting",
-  },
+  { className: "greeting" },
   "Hello, React!"
 );
 
-ReactDOM.render(greetingElem, rootElement);
+ReactDOM.render(greetingElem, rootElem);
