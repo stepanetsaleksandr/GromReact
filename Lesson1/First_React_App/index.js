@@ -8,7 +8,7 @@ const rootElement = document.querySelector("#root");
 const greetingElem = React.createElement(
   "div",
   {
-    class: "greeting",
+    className: "greeting",
   },
   "Hello, React!"
 );
