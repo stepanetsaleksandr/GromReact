@@ -1,6 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
 const rootElem = document.querySelector("#root");
 
 const greetingElem = React.createElement(
