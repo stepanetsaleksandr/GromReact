@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './styles.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./styles.css";
 
-const rootElement = document.querySelector('#root');
+const rootElement = document.querySelector("#root");
 
-const renderSeconds = time => {
+const renderSeconds = (time) => {
   const seconds = time.getSeconds();
-  const backgrondColor = seconds % 2 === 0 ? '#fff' : '#000';
-  const textColor = seconds % 2 === 0 ? '#000' : '#fff';
+  const backgrondColor = seconds % 2 === 0 ? "#fff" : "#000";
+  const textColor = seconds % 2 === 0 ? "#000" : "#fff";
 
   const styles = {
     color: textColor,
@@ -22,4 +22,4 @@ const renderSeconds = time => {
 
   ReactDOM.render(element, rootElement);
 };
-setInterval(() => renderSeconds(new Date()));
+setInterval(() => renderSeconds(new Date()), 1000);
