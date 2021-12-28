@@ -1,16 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './styles.css';
 
-const rootElement = document.querySelector("#root");
+const rootElement = document.querySelector('#root');
 
-const element = (
-  <>
-    <h1 class="title">Search Form</h1>
-    <div>
-      <input type="text" />
-      <button>Submit</button>
+const renderSeconds = time => {
+  const seconds = time.getSeconds();
+  const backgrondColor = seconds % 2 === 0 ? '#fff' : '#000';
+  const textColor = seconds % 2 === 0 ? '#000' : '#fff';
+
+  const styles = {
+    color: textColor,
+    backgroundColor: backgrondColor,
+  };
+
+  const element = (
+    <div className="seconds" style={styles}>
+      {seconds}
     </div>
-  </>
-);
+  );
 
-ReactDOM.render(element, rootElement);
+  ReactDOM.render(element, rootElement);
+};
+setInterval(() => renderSeconds(new Date()));
