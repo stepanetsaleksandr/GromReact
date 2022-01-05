@@ -1,6 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 
-class Toggler extends React.Component {
+class Toggler extends Component {
   constructor(props) {
     super(props);
 
