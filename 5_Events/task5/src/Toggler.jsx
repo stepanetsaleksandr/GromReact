@@ -17,9 +17,9 @@ class Toggler extends Component {
 
   render() {
     return (
-      <div onClick={this.setCondition} className="toggler">
+      <button onClick={this.setCondition} className="toggler">
         {this.state.condition}
-      </div>
+      </button>
     );
   }
 }
