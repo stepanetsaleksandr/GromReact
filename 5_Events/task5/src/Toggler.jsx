@@ -3,25 +3,23 @@ import React, { Component } from "react";
 class Toggler extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      condition: "Off",
+      active: false,
     };
   }
 
-  setCondition = (event) => {
+  toggle = () => {
     this.setState({
-      condition: event.target.textContent === "Off" ? "On" : "Off",
+      active: !this.state.active,
     });
   };
 
   render() {
     return (
-      <button onClick={this.setCondition} className="toggler">
-        {this.state.condition}
+      <button className="toggler" onClick={this.toggle}>
+        {this.state.active ? "On" : "Off"}
       </button>
     );
   }
 }
-
 export default Toggler;
