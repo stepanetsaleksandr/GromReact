@@ -17,23 +17,23 @@ body {
   align-items: center;
 
   &__avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
   }
 
   &__info {
-      text-align: center;
-      font-size: 24px;
-      margin: 32px;
+    text-align: center;
+    font-size: 24px;
+    margin: 32px;
   }
 
   &__name {
-      font-weight: 700;
+    font-weight: 700;
   }
 
   &__location {
-      opacity: 0.5;
-      margin-left: 16px;
+    opacity: 0.5;
+    margin-left: 16px;
   }
 }
