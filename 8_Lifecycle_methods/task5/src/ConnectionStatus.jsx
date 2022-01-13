@@ -18,6 +18,11 @@ class ConnectionStatus extends Component {
     this.setState({ status: "offline" });
   };
 
+  componentWillUnmount() {
+    window.removeEventListener("offline", this.setOffline);
+    window.removeEventListener("online", this.setOnline);
+  }
+
   netStatus = (state) => {
     const connection = state === "offline" ? "status status_offline" : "status";
     return connection;
