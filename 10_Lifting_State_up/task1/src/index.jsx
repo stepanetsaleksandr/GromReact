@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Page from "./Page";
+import App from "./App";
 import "./index.scss";
 
 const rootElement = document.querySelector("#root");
 
-ReactDOM.render(<Page userId="facebook" />, rootElement);
+ReactDOM.render(<App userId="facebook" />, rootElement);
