@@ -7,19 +7,19 @@ class Auth extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isLoggedIn: true,
+      isLoggedIn: false,
       processing: true,
     };
   }
 
   onLogin = () => {
     this.setState({
-      processing: false,
+      processing: true,
     });
     setTimeout(() => {
       this.setState({
         processing: false,
-        isLoggedIn: false,
+        isLoggedIn: true,
       });
     }, 2000);
   };
