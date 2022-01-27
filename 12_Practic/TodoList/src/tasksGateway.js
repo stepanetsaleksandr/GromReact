@@ -7,8 +7,8 @@ export const createTask = (taskData) => {
       "Content-Type": "application/json;charset=utf-8",
     },
     body: JSON.stringify(taskData),
-  }).then((respone) => {
-    if (!respone.ok) {
+  }).then((response) => {
+    if (!response.ok) {
       throw new Error("HEXYSI");
     }
   });
