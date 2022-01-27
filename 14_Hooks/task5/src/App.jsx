@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import Clock from './Clock.jsx';
+import React, { useState } from "react";
+import Clock from "./Clock.jsx";
 
 const App = () => {
   const [toggle, setToggle] = useState(true);
   return (
     <>
       <button className="toggle-time-btn" onClick={() => setToggle(!toggle)}>
-        {toggle ? 'hide' : 'show'}
+        {toggle ? "hide" : "show"}
       </button>
       <div className="world-time">
         {toggle && (
