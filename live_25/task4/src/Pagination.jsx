@@ -10,7 +10,6 @@ const Pagination = (props) => {
       <>
         <div className="pagination">
           <button onClick={props.prev} className="btn" disabled></button>
-
           <span className="pagination__page">{props.pageNumber}</span>
           <button onClick={props.next} className="btn">
             →
@@ -25,7 +24,6 @@ const Pagination = (props) => {
           <button onClick={props.prev} className="btn">
             ←
           </button>
-
           <span className="pagination__page">{props.pageNumber}</span>
           <button onClick={props.next} className="btn" disabled></button>
         </div>
