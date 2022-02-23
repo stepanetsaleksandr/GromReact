@@ -26,7 +26,7 @@ const User = () => {
   // запускаем фетч, когда меняется юсер айди
   React.useEffect(() => {
     fetchUserInfo(userIdParams);
-  }, []);
+  }, [userIdParams]);
 
   return (
     <div className="user">
