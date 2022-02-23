@@ -8,25 +8,26 @@ const User = ({ match }) => {
     location: null,
   });
 
-  const { userId: userIdParams } = useParams();
+  const { userId } = useParams();
 
   const { avatarUrl, name, location } = userData;
 
-  const fetchUserInfo = async (userId) => {
-    const responce = await fetch(`https://api.github.com/users/${userId}`);
-    const userInfo = await responce.json();
-
-    setUserData({
-      avatarUrl: userInfo.avatar_url,
-      name: userInfo.name,
-      location: userInfo.location,
-    });
+  const fetchUserInfo = (userId) => {
+    return fetch(`https://api.github.com/users/${userId}`)
+      .then((responce) => responce.json())
+      .then((userInfo) => {
+        setUserData({
+          avatarUrl: userInfo.avatar_url,
+          name: userInfo.name,
+          location: userInfo.location,
+        });
+      });
   };
 
-  // запускаем фетч, когда меняется юсер айди
   React.useEffect(() => {
-    fetchUserInfo(userIdParams);
-  }, [userId]);
+    console.log(userId);
+    fetchUserInfo(match.params.userId);
+  }, []);
 
   return (
     <div className="user">
